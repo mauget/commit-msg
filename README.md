@@ -28,7 +28,7 @@ sed -i '' -e  "s/.*/$NEW_MSG/g" $1
 
 ### Linux or Windows
 
-These interpret the `-i` switch differently than Mac OS.
+These interpret the `-i` switch differently than does Mac OS.
 
 ```shell script
 #!/usr/bin/env bash
