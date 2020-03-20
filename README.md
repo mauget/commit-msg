@@ -25,7 +25,8 @@ echo "Commit message: " $(cat %1)
 Touch this README.md file, then commit it, supplying your commit message.
   
 ```shell script
-git add *
+touch README.md
+git add README.md
 git commit -m "I'm committed"
 ```
 
