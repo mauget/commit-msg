@@ -1,4 +1,4 @@
-# Demo Project The  Git Commit Hook
+# Git Commit Hook Demo
 
 ## What
 This project is an example of a git commit-msg hook
