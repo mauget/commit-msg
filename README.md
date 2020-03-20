@@ -16,6 +16,7 @@ following contents:
 
 ```shell script
 #!/usr/bin/env bash
+
 echo "Commit message: " $(cat %1)
 ```
 
@@ -57,8 +58,8 @@ usual UNIX shell shebang language indicator. Ours uses `bash`.
 If the OS is Windows, Git will execute the file via the `gitbash`
 shell. 
 
-### A Python `commit-msg` on Windows
-If the script language were python resident on a Windows OS, the 
+### Using a Python `commit-msg` on Windows n
+If the script language were python, resident on a MS Windows, the 
 script header would likely need to be `winpty`, passing python 
 and `$1` arguments.
 
