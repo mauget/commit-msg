@@ -45,11 +45,11 @@ commit fce9496125bda9abbad8d74deca5da53f4f0d288 (HEAD -> master)
 Author: mauget <mauget@gmail.com>
 Date:   Thu Mar 19 19:51:27 2020 -0400
 
-    Test 4
+    I'm committed
 ```
 
 A smarter `commit-msg` could prepend a JIRA issue number to 
-that commit message, or do something equivalent.
+that commit message, or something equivalent for your Agile process.
 
 ### Using bash or sh
 The `commit-msg` file must be marked executable. It must have the
