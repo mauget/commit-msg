@@ -11,7 +11,11 @@ message.
 ## Trivial `commit-msg` Hook:
  
 Create  `.git/hooks/commit-msg` in this project. Give it the
-following contents:
+following contents according to your operating system:
+
+### Mac OS
+
+The sed command acts uniquely in Mac OS.
 
 ```shell script
 #!/usr/bin/env bash
@@ -21,6 +25,19 @@ NEW_MSG="Commit message: $OLD_MSG"
 
 sed -i '' -e  "s/.*/$NEW_MSG/g" $1
 ```
+
+### Linux or Windows
+
+```shell script
+#!/usr/bin/env bash
+
+OLD_MSG=$(cat $1)
+NEW_MSG="Commit message: $OLD_MSG"
+
+sed -i  "s/.*/$NEW_MSG/g" $1
+```
+
+
 
 ## Try It
 
