@@ -5,7 +5,7 @@ This project is an example of a git commit-msg hook.
 
 If Git sees file `.git/hooks/commit-msg` in its repository tree,
 Git will execute it, passing an argument path to file 
-`.git/COMMIT_EDITMSG`. That file contains the commit
+`.git/COMMIT_EDITMSG`. That file contains the raw commit
 message. 
 
 ## Trivial `commit-msg` Hook:
@@ -28,7 +28,8 @@ sed -i '' -e  "s/.*/$NEW_MSG/g" $1
 
 ### Linux or Windows
 
-These interpret the sed `-i` switch differently than does Mac OS.
+1. These interpret the sed `-i` switch differently than does Mac OS
+1. Don't forget to make the script executable; e.g. `chmod 755 ./.git/hooks/commit-msg`
 
 ```shell script
 #!/usr/bin/env bash
