@@ -73,21 +73,23 @@ commit dc941c0d1d6150eda0955f13d50
 
 ## Notes
 
+The `commit-msg` script doesn't travel with commits. It is a client-side hook that
+is not itself committed. 
+
 A smarter `commit-msg` could prepend a JIRA issue number to 
-that commit message, or something equivalent for your Agile process.
+that commit message, or insert something equivalent that applies to 
+your  process.
 
 ### Using bash or sh
-The `commit-msg` file must be marked executable. It must have the
-usual UNIX shell shebang language indicator. Ours uses `bash`.
-If the OS is Windows, Git will execute the file via the `gitbash`
+The `commit-msg` file must be marked executable in UNIX-based 
+environments. It must have the usual UNIX shell shebang language indicator. 
+Ours uses `bash`. If the OS is Windows, Git will execute the file via the `gitbash`
 shell. 
 
 ### Using a Python `commit-msg` on Windows n
-If the script language were python, resident on a MS Windows, the 
+If the script language is a python resident on a MS Windows, the 
 script header would likely need to be `winpty`, passing python 
-and `$1` arguments.
-
-Search the web literature for more information about this 
+and `$1` arguments. Search the web literature for more information about this 
 Windows-meets-UNIX case.
 
 
