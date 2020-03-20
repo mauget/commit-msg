@@ -55,8 +55,8 @@ If using Windows, Git will execute the file from the `gitbash`
 shell. 
 
 ### Windows
-If the script language is python resident on a Windows OS, the 
-will need to invoke `winpty` passing python and `$1` arguments.
-Search for more information in this case.
+If the script language were python resident on a Windows OS, you 
+would need to invoke `winpty` passing python and `$1` arguments.
+Search the web literature for more information about this case.
 
 
