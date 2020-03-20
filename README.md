@@ -1,16 +1,16 @@
 # Git Commit Hook Demo
 
 ## What
-This project is an example of a git commit-msg hook
-
-## Trivial `commit-msg` Hook:
+This project is an example of a git commit-msg hook.
 
 If Git sees file `.git/hooks/commit-msg` in its repository tree,
 it will execute it, passing an argument based on the contents
 of file `.git/COMMIT_EDITMSG`. That file contains your commit
 message appended to a bracketed branch name ID. It acquires appended 
-counts changes, insertions, and deletions. 
+counts changes, insertions, and deletions.
 
+## Trivial `commit-msg` Hook:
+ 
 Create  `.git/hooks/commit-msg` in this project. Give it the
 following contents:
 
