@@ -22,7 +22,7 @@ echo "Commit message: " $(cat %1)
 
 ## Try It
 
-Touch this README.md file, then commit it, supplying your commit message.
+Sligntlhy this README.md file, then commit it, supplying your commit message.
   
 ```shell script
 touch README.md
