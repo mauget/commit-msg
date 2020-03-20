@@ -15,7 +15,7 @@ following contents according to your operating system:
 
 ### Mac OS
 
-The sed command acts uniquely in Mac OS.
+The sed command `-i` switch acts uniquely in Mac OS.
 
 ```shell script
 #!/usr/bin/env bash
@@ -28,6 +28,8 @@ sed -i '' -e  "s/.*/$NEW_MSG/g" $1
 
 ### Linux or Windows
 
+These interpret the `-i` switch differently than Mac OS.
+
 ```shell script
 #!/usr/bin/env bash
 
@@ -36,8 +38,6 @@ NEW_MSG="Commit message: $OLD_MSG"
 
 sed -i  "s/.*/$NEW_MSG/g" $1
 ```
-
-
 
 ## Try It
 
