@@ -1,9 +1,25 @@
-# Test Project for Testing Git Commit Hook
+# Demo Project The  Git Commit Hook
 
 ## What
 This project is an example of a git commit-msg hook
 
-## Lab
+## Trivial `commit-msg` Hook:
+
+If Git sees file `.git/hooks/commit-msg` in its repository tree,
+it will execute it, passing an argument based on the contents
+of file `.git/COMMIT_EDITMSG`. That file contains your commit
+message appended to a bracketed branch name ID. It acquires appended 
+counts changes, insertions, and deletions. 
+
+Create  `.git/hooks/commit-msg` in this project. Give it the
+following contents:
+
+```shell script
+#!/usr/bin/env bash
+echo "Commit message: " $(cat %1)
+```
+
+## Try It
 
 Touch this README.md file, then commit it, supplying your commit message.
   
@@ -32,31 +48,21 @@ Date:   Thu Mar 19 19:51:27 2020 -0400
     Test 4
 ```
 
-A smarter `commit-msg` could prepend a JIRA issue number,
-or the equivalent, to that commit message.
-
-## Source of Simple `commit-msg` Hook:
-
-If Git sees file `.git/hooks/commit-msg` in its repository tree,
-it will execute it, passing an argument based on the contents
-of file `.git/COMMIT_EDITMSG`. This file contains your commit
-message appended to a bracketed branch name ID. It has appended 
-counts changes, insertions, and deletions. 
-
-```shell script
-#!/usr/bin/env bash
-echo "Commit message: " $(cat %1)
-```
+A smarter `commit-msg` could prepend a JIRA issue number to 
+that commit message, or do something equivalent.
 
 ### Using bash or sh
-The `commit-msg` file must be marekd executable. It must have the
-usual Unix shebang language indicator. Ours uses `bash`.
-If using Windows, Git will execute the file from the `gitbash`
+The `commit-msg` file must be marked executable. It must have the
+usual UNIX shell shebang language indicator. Ours uses `bash`.
+If the OS is Windows, Git will execute the file via the `gitbash`
 shell. 
 
-### Windows
-If the script language were python resident on a Windows OS, you 
-would need to invoke `winpty` passing python and `$1` arguments.
-Search the web literature for more information about this case.
+### A Python `commit-msg` on Windows
+If the script language were python resident on a Windows OS, the 
+script header would likely need to be `winpty`, passing python 
+and `$1` arguments.
+
+Search the web literature for more information about this 
+Windows-meets-UNIX case.
 
 
